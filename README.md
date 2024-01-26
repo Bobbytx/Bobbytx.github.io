@@ -1,3 +1,1 @@
-To do:
-- create proper grids for sections and use flexbox
-- use 
+My Portfolio Website

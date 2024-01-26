@@ -1,0 +1,333 @@
+@font-face {
+  font-family: 'TriakisFont';
+  src: url('/font/TriakisFont-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'RobotoMono';
+  src: url('/font/RobotoMono-Regular.ttf') format('truetype');
+} /*may have to use a .woff2 file instead of .ttf*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  background-color: #E0DFDD;
+  font-family: 'TriakisFont', sans-serif;
+}
+
+main {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid-container {
+  display: grid;
+  column-gap: 1rem;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.hero-title {
+  grid-column: 2 / 5;
+}
+
+
+.hero-title h1 {
+  font-size: 10rem;
+  color: black;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 3rem;
+  
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 8rem;
+}
+
+.hero-description {
+  grid-column: 7 / 12;
+  text-align: left;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 12rem;
+
+}
+
+.hero-button {
+  width: 14.875rem;
+  padding: 0.5rem;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid var(--primary-black, #010101);
+  background: var(--primary-gray, #E0DFDD);
+  box-shadow: 4px 4px 0px 0px #00EC42;
+  margin-top: 2rem;
+
+}
+
+.hero-links {
+  display: flex;
+  justify-content: space-between; 
+  grid-column: 2 / 12;
+  grid-row: 7;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.link-left {
+  writing-mode: vertical-lr; 
+  transform: rotate(180deg); 
+}
+
+.link-right {
+  display: flex;
+  align-items: flex-end;
+}
+
+
+
+a, a:link, a:visited, a:hover, a:active, a:focus {
+  color: #000000;
+  text-decoration: none;
+}
+a:hover {
+  color: #00EC42;
+  text-decoration: none;
+}
+
+/* NAVBAR CSS */
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #E0DFDD;
+    font-family: 'TriakisFont', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    height: 5rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    
+  }
+  
+  .navbar-section {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+  }
+
+  .navbar-section a:not(:last-child) {
+    margin-right: 15px; /* Adjust this value as needed */
+  }  
+
+  .status {
+    margin-right: 2rem;
+    
+  }
+
+  .navbar-circle {
+    border: solid black;
+    border-width: 1px;
+    border-radius: 50%;
+    background-color: #00EC42;
+    color: #00EC42;
+    margin-right: .5rem;
+    width: 0.625rem;
+    height: 0.625rem;
+  }
+
+  /* experience CSS */
+  
+  .experience-title, .icebreakers-title, .projects-title {
+    grid-column: 2 / 5;
+  }
+  
+  .experience-content, .icebreakers-content, .projects-content {
+    grid-column: 6 / 12;
+    color: black;
+    font-family: "Roboto Mono";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 3rem;
+  }
+  .tools-container {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  
+  .tool {
+    border: 1px solid black; 
+    border-radius: 1.25rem; 
+    text-align: center;
+    font-family: 'TriakisFont', sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    height: 1.5rem;
+    padding: 0.0625rem 0.5rem 0rem 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0.25rem;
+  }
+
+  h3 { 
+    margin: .75rem 0rem .75rem 0rem;
+  }
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 3rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.bar {
+  height: 0.25rem;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+  
+/* Responsiveness for smaller screens */
+@media (max-width: 826px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  .hero-title, .hero-description, .hero-links, .experience-title, .experience-content, .icebreakers-title, .icebreakers-content, .projects-title, .projects-content{
+    grid-column: 1 / -1; /* Span the full width of the grid */
+  }
+
+  .experience-title, .icebreakers-title, .projects-title {
+    margin-bottom: 1rem; 
+  }
+
+  .hero-subtitle {
+    margin: 0rem; 
+  }
+
+  .hero-description {
+    margin-top: 2rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-links {
+    margin-top: 2rem; 
+  }
+  .hero-button {
+    margin-top: 1rem;
+  }
+}
+
+/* Responsive styles for the navbar */
+@media (max-width: 911px) {
+
+  .hero-title h1{
+    font-size: 6rem;
+  }
+
+  /* Style adjustments for the navbar container */
+  .navbar {
+    justify-content: space-between; /* Ensures items are spaced out */
+    position: relative;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .navbar.active {
+    background-color: #00EC42;
+  }
+
+  /* Show the hamburger menu icon */
+  .hamburger-menu {
+    display: flex; /* Show the hamburger icon */
+    position: absolute; 
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .navbar-section.links, .navbar-section.location, .navbar-section.contact a {
+    display: none;
+  }
+  .navbar-section.contact {
+    display: flex;
+    margin-left: auto;
+    
+  }
+
+  .navbar-section.links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: #00EC42;
+    max-height: 0; /* Start with 0 height to hide content */
+    transition: max-height 0.3s ease, visibility 0s linear 0.3s; /* Animate the max-height property */
+    visibility: hidden; /* Hide the menu initially */
+  }
+
+
+
+  /* Show the links when the hamburger menu is active */
+  .navbar-section.links.active {
+    display: flex; 
+    flex-direction: column;
+    position: relative; 
+    top: 5rem; /* Position the links below the navbar */
+    left: 0;
+    width: 100%;
+    background-color: #00EC42;
+    max-height: 400px; /* Max height for menu content */
+    visibility: visible; /* Make the menu visible */
+    transition: max-height 1s ease, visibility 0s linear 0s; /* Animate max-height and make visibility instant */
+  }
+
+  /* Style each link in the dropdown */
+  .navbar-section.links a {
+    padding-right: 1rem;
+    border-top: 1px solid black; /* Add a separator between links */
+    opacity: 1;
+    transition: opacity 1.9s ease;
+
+  }
+
+  /* Remove top border from the first link for aesthetics */
+  .navbar-section.links a:first-child {
+    border-top: none;
+  }
+
+  main {
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+  }
+  a:hover {
+    color: black;
+  }
+}
