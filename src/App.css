@@ -18,6 +18,7 @@ html {
   height: 100%;
   background-color: #E0DFDD;
   font-family: 'TriakisFont', sans-serif;
+  scroll-behavior: smooth;
 }
 
 main {
@@ -94,18 +95,22 @@ main {
 
 .link-right {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  
 }
-
-
+.arrow {
+  display: block;
+  font-size: 8rem;
+  align-self: center;
+}
 
 a, a:link, a:visited, a:hover, a:active, a:focus {
   color: #000000;
   text-decoration: none;
 }
 a:hover {
-  color: #00EC42;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 /* NAVBAR CSS */
@@ -115,7 +120,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     background: #E0DFDD;
-    font-family: 'TriakisFont', sans-serif;
+    font-family: 'TriakisFont', 'sans-serif';
     font-size: 24px;
     font-weight: 400;
     height: 5rem;
@@ -144,7 +149,6 @@ a:hover {
     border-width: 1px;
     border-radius: 50%;
     background-color: #00EC42;
-    color: #00EC42;
     margin-right: .5rem;
     width: 0.625rem;
     height: 0.625rem;
@@ -159,7 +163,7 @@ a:hover {
   .experience-content, .icebreakers-content, .projects-content {
     grid-column: 6 / 12;
     color: black;
-    font-family: "Roboto Mono";
+    font-family:'RobotoMono';
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 400;
@@ -329,5 +333,8 @@ a:hover {
   }
   a:hover {
     color: black;
+  }
+  .arrow {
+    font-size: 5rem;
   }
 }

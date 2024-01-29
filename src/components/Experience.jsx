@@ -1,8 +1,10 @@
+import React from 'react'
+
 function Experience() {
   return (
     <div className="grid-container">
       {/* Left Side - "Experience" Title */}
-      <div className="experience-title">
+      <div className="experience-title" id="experience">
         <h2>&lt; Experience</h2>
       </div>
 

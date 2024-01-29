@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Experience from "./components/Experience";
 import Icebreakers from "./components/Icebreakers";
 import Projects from './components/Projects';
-// import Projects from "./components/Projects";
+import React from 'react'
 
 function App() {
 

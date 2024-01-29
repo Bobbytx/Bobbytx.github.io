@@ -1,3 +1,5 @@
+import React from 'react'
+
 function Icebreakers() {
     return (
       <div className="grid-container">
