@@ -1,37 +1,46 @@
-import React from 'react'
-
-import { useState } from "react";
+import React, { useState, useEffect, useRef } from 'react';
+import '../styles/Navbar.css';
+import HamburgerIcon from './HamburgerIcon';
 
 function Navbar() {
-  const [isNavExpanded, setIsNavExpanded] = useState(false); // State to handle the menu toggle
+    const [isOpen, setIsOpen] = useState(false);
+    const navRef = useRef();
 
-  return (
-    <nav className={`navbar ${isNavExpanded ? "active" : ""}`}>
-      <div className="navbar-section location">
-        Based in Houston, TX
-      </div>
-      {/* Hamburger Icon */}
-      <div 
-        className="hamburger-menu" 
-        onClick={() => setIsNavExpanded(!isNavExpanded)}
-      >
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-      </div>
-      {/* Navbar Links */}
-      <div className={`navbar-section links ${isNavExpanded ? "active" : ""}`}>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-      </div>
-      <div className="navbar-section contact">
-        <div className="navbar-circle"></div>
-        <span className="status">Open to work</span>
-        <a href="mailto:bobby.toth@gmail.com">bobby.toth@gmail.com</a>
-      </div>
-    </nav>
-  );
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
+    useEffect(() => {
+      const handleClickOutside = (e) => {
+          if (navRef.current && !navRef.current.contains(event.target)) {
+              setIsOpen(false);
+          }
+      };
+
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+          document.removeEventListener('mousedown', handleClickOutside);
+      };
+  }, [navRef], [setIsOpen]);
+
+    return (
+        <nav className="navbar" ref={navRef}>
+            <div className="location">Houston/Austin, TX</div>
+            <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Experience">Experience</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="mailto:bobby.toth@gmail.com">Contact</a></li>
+            </ul>
+            <div className="work-status">
+              <div className="navbar-circle"></div>
+              <div className="status">Open to work</div>
+            </div>
+            <div className="hamburger" onClick={toggleMenu}>
+                <HamburgerIcon isOpen={isOpen} />
+            </div>
+        </nav>
+    );
 }
 
 export default Navbar;

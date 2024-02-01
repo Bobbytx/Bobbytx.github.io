@@ -113,47 +113,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* NAVBAR CSS */
-
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #E0DFDD;
-    font-family: 'TriakisFont', 'sans-serif';
-    font-size: 24px;
-    font-weight: 400;
-    height: 5rem;
-    margin-left: 7rem;
-    margin-right: 7rem;
-    
-  }
-  
-  .navbar-section {
-    display: flex;
-    align-items: center;
-    margin-right: 15px;
-  }
-
-  .navbar-section a:not(:last-child) {
-    margin-right: 15px; /* Adjust this value as needed */
-  }  
-
-  .status {
-    margin-right: 2rem;
-    
-  }
-
-  .navbar-circle {
-    border: solid black;
-    border-width: 1px;
-    border-radius: 50%;
-    background-color: #00EC42;
-    margin-right: .5rem;
-    width: 0.625rem;
-    height: 0.625rem;
-  }
-
   /* experience CSS */
   
   .experience-title, .icebreakers-title, .projects-title {
@@ -193,27 +152,65 @@ a:hover {
     margin: 0.25rem;
   }
 
+  .tool:hover {
+    background-color: #00EC42; /* Blue background on hover */
+    transition: background-color 0.3s, color 0.3s;
+  }
+
   h3 { 
     margin: .75rem 0rem .75rem 0rem;
   }
 
-/* Hamburger Menu Styles */
-.hamburger-menu {
-  display: none; /* Hidden by default */
-  flex-direction: column;
-  justify-content: space-around;
-  width: 3rem;
-  height: 1.5rem;
-  cursor: pointer;
-}
-
-.bar {
-  height: 0.25rem;
-  width: 100%;
-  background-color: black;
-  border-radius: 10px;
-}
+  /* projects css */
   
+  .project-item {
+    margin-bottom: 2rem;
+  }
+  
+  .project-item img {
+    width: 100%;
+    max-width: 400px; /* Adjust as necessary */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-item h3 {
+    margin-top: 1rem;
+  }
+  
+  .project-item p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .project-item ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .project-item li {
+    display: inline-block;
+    margin-right: 10px;
+    background: #E0DFDD;
+    padding: 0.5rem;
+    border-radius: 4px;
+  }
+  
+  .project-item a {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+  
+  .project-item a:hover {
+    background-color: #ddd;
+  }
+  
+
 /* Responsiveness for smaller screens */
 @media (max-width: 826px) {
   .grid-container {
@@ -245,92 +242,27 @@ a:hover {
   .hero-button {
     margin-top: 1rem;
   }
+  .navbar {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 }
 
-/* Responsive styles for the navbar */
 @media (max-width: 911px) {
 
   .hero-title h1{
     font-size: 6rem;
   }
 
-  /* Style adjustments for the navbar container */
   .navbar {
-    justify-content: space-between; /* Ensures items are spaced out */
-    position: relative;
-    flex-wrap: wrap;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 4.6rem;
+    margin-right: 4.6rem;
   }
-
-  .navbar.active {
-    background-color: #00EC42;
-  }
-
-  /* Show the hamburger menu icon */
-  .hamburger-menu {
-    display: flex; /* Show the hamburger icon */
-    position: absolute; 
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  .navbar-section.links, .navbar-section.location, .navbar-section.contact a {
-    display: none;
-  }
-  .navbar-section.contact {
-    display: flex;
-    margin-left: auto;
-    
-  }
-
-  .navbar-section.links {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    background-color: #00EC42;
-    max-height: 0; /* Start with 0 height to hide content */
-    transition: max-height 0.3s ease, visibility 0s linear 0.3s; /* Animate the max-height property */
-    visibility: hidden; /* Hide the menu initially */
-  }
-
-
-
-  /* Show the links when the hamburger menu is active */
-  .navbar-section.links.active {
-    display: flex; 
-    flex-direction: column;
-    position: relative; 
-    top: 5rem; /* Position the links below the navbar */
-    left: 0;
-    width: 100%;
-    background-color: #00EC42;
-    max-height: 400px; /* Max height for menu content */
-    visibility: visible; /* Make the menu visible */
-    transition: max-height 1s ease, visibility 0s linear 0s; /* Animate max-height and make visibility instant */
-  }
-
-  /* Style each link in the dropdown */
-  .navbar-section.links a {
-    padding-right: 1rem;
-    border-top: 1px solid black; /* Add a separator between links */
-    opacity: 1;
-    transition: opacity 1.9s ease;
-
-  }
-
-  /* Remove top border from the first link for aesthetics */
-  .navbar-section.links a:first-child {
-    border-top: none;
-  }
-
-  main {
+  .main {
     margin-left: 2rem;
     margin-right: 2rem;
-
   }
+  
   a:hover {
     color: black;
   }
@@ -338,3 +270,4 @@ a:hover {
     font-size: 5rem;
   }
 }
+

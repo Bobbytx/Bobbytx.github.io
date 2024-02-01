@@ -8,7 +8,6 @@ import Projects from './components/Projects';
 import React from 'react'
 
 function App() {
-
   return (
     <main className="main">
       <Navbar />
@@ -19,5 +18,4 @@ function App() {
     </main>
   );
 }
-
 export default App

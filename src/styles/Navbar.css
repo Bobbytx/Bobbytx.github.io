@@ -1,0 +1,137 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #E0DFDD;
+    font-family: 'TriakisFont', 'sans-serif';
+    font-size: 24px;
+    font-weight: 400;
+    height: 5rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.hamburger-icon {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: relative;
+}
+
+.hamburger-icon span {
+    background-color: #333;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-icon span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger-icon span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger-icon span:nth-child(3) {
+    bottom: 0;
+}
+
+/* Transforming into 'X' */
+.hamburger-icon.open span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+.status {
+    margin-right: 2rem;
+    }
+
+.navbar-circle {
+    border: solid black;
+    border-width: 1px;
+    border-radius: 50%;
+    background-color: #00EC42;
+    margin-right: .5rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    }
+.work-status {
+    display: flex;
+}
+/* Style for smaller screens */
+
+@media (max-width: 826px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navbar {
+        margin-left: 0rem;
+        margin-right: 0rem;
+        justify-content: space-between;
+        position: relative;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 60px; 
+        display: none;
+        flex-direction: column;
+        background-color: #fff; 
+        width: 100%;
+        text-align: right;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px 20px;
+    }
+    .work-status {
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+@media (max-width: 468px){
+    .location {
+        display: none;
+    }
+    .navbar {
+        justify-content: flex-end; /* This will align the remaining items to the right */
+    }
+}
