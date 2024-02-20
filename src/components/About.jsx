@@ -11,7 +11,7 @@ function Hero() {
 
       {/* Description and Button */}
       <div className="hero-description">
-        <p>I’m advancing my skills in a Full-Stack Software Engineer bootcamp at Code Platoon! Delving into a comprehensive curriculum covering JavaScript, Python, HTML, CSS, React, and more, while also exploring foundational computer science concepts like algorithms, data structures, and Object-Oriented Programming (OOP).</p>
+        <p>(testing) I’m advancing my skills in a Full-Stack Software Engineer bootcamp at Code Platoon! Delving into a comprehensive curriculum covering JavaScript, Python, HTML, CSS, React, and more, while also exploring foundational computer science concepts like algorithms, data structures, and Object-Oriented Programming (OOP).</p>
         <a href="mailto:bobby.toth@gmail.com">
         <button className="hero-button">LET'S CONNECT</button>
         </a>
