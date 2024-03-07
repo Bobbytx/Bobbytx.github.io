@@ -10,8 +10,8 @@ function Hero() {
       </div>
 
       {/* Description and Button */}
-      <div className="hero-description">
-        <p>I’m advancing my skills in a Full-Stack Software Engineer bootcamp at Code Platoon! Delving into a comprehensive curriculum covering JavaScript, Python, HTML, CSS, React, and more, while also exploring foundational computer science concepts like algorithms, data structures, and Object-Oriented Programming (OOP).</p>
+      <div className="hero-description" id="about">
+        <p>Following my military service I graduated with a B.B.A in SCM and embarked on a 4.5 year tenure at Amazon in operations and program management. I've since completed a Full-Stack Software Engineer bootcamp at Code Platoon. This bridged my managerial acumen with technical expertise, broadening my scope to contribute to innovative, tech-centric projects. I'm enthusiastic about integrating this blend of skills to drive efficiency and innovation in future roles, and keen to connect with professionals and organizations at the intersection of management and technology.</p>
         <a href="mailto:bobby.toth@gmail.com">
         <button className="hero-button">LET'S CONNECT</button>
         </a>

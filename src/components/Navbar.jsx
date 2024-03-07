@@ -27,9 +27,9 @@ function Navbar() {
         <nav className="navbar" ref={navRef}>
             <div className="location">Houston/Austin, TX</div>
             <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Experience">Experience</a></li>
-                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="mailto:bobby.toth@gmail.com">Contact</a></li>
             </ul>
             <div className="work-status">

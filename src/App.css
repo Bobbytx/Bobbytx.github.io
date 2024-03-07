@@ -45,7 +45,6 @@ main {
   font-weight: 400;
   line-height: normal;
   margin-top: 3rem;
-  
 }
 
 .hero-subtitle {
@@ -59,11 +58,11 @@ main {
 .hero-description {
   grid-column: 7 / 12;
   text-align: left;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
-  margin-top: 12rem;
-
+  margin-top: 10rem;
+  line-height: 1.2;
 }
 
 .hero-button {
@@ -76,7 +75,6 @@ main {
   background: var(--primary-gray, #E0DFDD);
   box-shadow: 4px 4px 0px 0px #00EC42;
   margin-top: 2rem;
-
 }
 
 .hero-links {
@@ -190,10 +188,9 @@ a:hover {
   
   .project-item li {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 8px;
     background: #E0DFDD;
     padding: 0.5rem;
-    border-radius: 4px;
   }
   
   .project-item a {
@@ -208,6 +205,7 @@ a:hover {
   
   .project-item a:hover {
     background-color: #ddd;
+    border: 1px solid #00EC42;
   }
   
 
