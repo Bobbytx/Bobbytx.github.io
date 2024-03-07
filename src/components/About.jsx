@@ -23,9 +23,12 @@ function Hero() {
           <span><a href="https://github.com/Bobbytx" target="_blank" rel="noopener noreferrer">GitHub</a> / <a href="https://www.linkedin.com/in/roberttothpm/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
         </div>
         <div className="link-right">
-          <span className="arrow">↓</span>
-          <span><a href="#experience">Scroll down</a></span>
+          <a href="#experience" className="custom-link">
+            <span className="arrow">↓</span>
+            <span className="scroll-text">Scroll down</span>
+          </a>
         </div>
+
       </div>
     </div> 
   );

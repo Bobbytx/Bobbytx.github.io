@@ -95,12 +95,22 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+/* Styles for the custom link */
+.custom-link {
+  text-decoration: none; /* This prevents underlining the entire link */
+  display: flex; /* Make custom-link a flex container */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center-align children horizontally */
+}
+
+.custom-link:hover .scroll-text {
+  text-decoration: underline; /* Underlines only the "Scroll down" text on hover */
+}
   
 }
 .arrow {
-  display: block;
-  font-size: 8rem;
-  align-self: center;
+  font-size: 7rem;
 }
 
 a, a:link, a:visited, a:hover, a:active, a:focus {
