@@ -23,4 +23,4 @@ The Continuous Integration and Continuous Deployment (CI/CD) pipeline is set up 
 
 ### GitHub Actions Workflow Configuration
 
-The `.github/workflows/deployment.yml` file contains the configuration for the CI/CD pipeline. Here's a simplified example of what the workflow might look like:
+The `.github/workflows/deploy.yml` file contains the configuration for the CI/CD pipeline.
