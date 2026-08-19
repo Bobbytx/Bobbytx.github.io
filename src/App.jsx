@@ -1,6 +1,6 @@
-import './App.css'
-import React from 'react'
-import Navbar from './components/Navbar'
+import "./App.css";
+import React from "react";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
@@ -10,12 +10,23 @@ function App() {
         {/* Hero/About Section */}
         <div className="grid-container">
           <div className="hero-title">
-            <h1>ROBERT<br/>TOTH</h1>
-            <p className="hero-subtitle">Full-Stack<br></br> Software<br></br> Developer</p>
+            <h1>
+              ROBERT
+              <br />
+              TOTH
+            </h1>
+            <p className="hero-subtitle">
+              Websites /<br></br> Software /<br></br> AI
+            </p>
           </div>
 
           <div className="hero-description" id="about">
-            <p>I'm a former Amazon program manager turned full-stack software engineer, blending management expertise with technical skills. I'm driven to leverage this unique skill set to innovate and optimize in tech-driven environments, and I'm eager to connect with professionals at the intersection of management and technology.</p>
+            <p>
+              I like building things, figuring out how they work, and
+              occasionally making them more complicated than necessary. Lately,
+              that means websites, AI, automation, and whatever else catches my
+              attention.
+            </p>
             <a href="mailto:bobby.toth@gmail.com">
               <button className="hero-button">LET'S CONNECT</button>
             </a>
@@ -23,7 +34,23 @@ function App() {
 
           <div className="hero-links">
             <div className="link-left">
-              <span><a href="https://github.com/Bobbytx" target="_blank" rel="noopener noreferrer">GitHub</a> / <a href="https://www.linkedin.com/in/roberttothpm/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+              <span>
+                <a
+                  href="https://github.com/Bobbytx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>{" "}
+                /{" "}
+                <a
+                  href="https://www.linkedin.com/in/roberttothpm/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+              </span>
             </div>
             <div className="link-right">
               <a href="#experience" className="custom-link">
@@ -37,54 +64,55 @@ function App() {
         {/* Icebreakers Section */}
         <div className="grid-container">
           <div className="icebreakers-title" id="icebreakers">
-            <h2>&lt; Icebreakers /&gt;</h2>
+            <h2>&lt; Offline /&gt;</h2>
           </div>
           <div className="icebreakers-content">
             <p>
-              I'm a big sports fan! I love following my local teams and attending sports events. I'm always looking for new restaurants to try out around the city. I try to travel as much as possible to explore new areas especially scenic environments (work with me so I can fund this). <a href="mailto:bobby.toth@gmail.com">GET IN TOUCH</a> to know more about me.
+              Big sports fan. I follow my Texas teams and love going to games
+              whenever I get the chance. I’m always looking for new restaurants
+              to try and new places to travel, especially anywhere with a great
+              view. Lately, I’ve been learning to play guitar. I also enjoy
+              fixing things, working with my hands, and taking on DIY projects
+              around the house. Work with me so I can keep funding these
+              hobbies.. <a href="mailto:bobby.toth@gmail.com">GET IN TOUCH</a>{" "}
+              if you want to know more.
             </p>
           </div>
         </div>
-        
-        {/* Experience Section */}
+
+        {/* What I Do Section */}
         <div className="grid-container">
           <div className="experience-title" id="experience">
-            <h2>&lt; Experience /&gt;</h2>
+            <h2>&lt; What I Do /&gt;</h2>
           </div>
+
           <div className="experience-content">
+            <h3>WEB</h3>
             <p>
-              {/* Your experience content */}
+              I design and build websites with a focus on clean interfaces,
+              responsive layouts, performance, and making things actually work.
             </p>
-            <h3>Tools</h3>
-            <div className="tools-container">
-              <div className="tool">Python</div>
-              <div className="tool">Pandas</div>
-              <div className="tool">Matplotlib</div>
-              <div className="tool">Flask</div>
-              <div className="tool">JavaScript</div>
-              <div className="tool">React</div>
-              <div className="tool">Bootstrap</div>
-              <div className="tool">SQL</div>
-              <div className="tool">Postgres</div>
-              <div className="tool">Node.js</div>
-              <div className="tool">Jest</div>
-              <div className="tool">Cypress</div>
-              <div className="tool">Tailwind</div>
-              <div className="tool">RESTful APIs</div>
-              <div className="tool">Vite</div>
-            </div>
-            <h3>Skills</h3>
-            <div className="tools-container">
-              <div className="tool">Cross-functional Teams</div>
-              <div className="tool">Communication</div>
-              <div className="tool">Project Management</div>
-              <div className="tool">Problem Solving</div>
-              <div className="tool">Backlog Refinement</div>
-              <div className="tool">Decision Making</div>
-              <div className="tool">Task Prioritization</div>
-              <div className="tool">Stakeholder Engagement</div>
-              <div className="tool">Agile Ceremonies</div>
-            </div>
+
+            <h3>AI</h3>
+            <p>
+              I spend a lot of time evaluating AI outputs and experimenting with
+              AI-assisted development, local models, computer vision, and
+              whatever else seems interesting.
+            </p>
+
+            <h3>AUTOMATION</h3>
+            <p>
+              If I have to do something repeatedly, there&apos;s a decent chance
+              I&apos;ll spend more time automating it than it would have taken
+              to just do it.
+            </p>
+
+            <h3>PROBLEM SOLVING</h3>
+            <p>
+              I like figuring things out. Software, websites, computers,
+              cameras, home projects, and anything else that gives me a problem
+              to solve.
+            </p>
           </div>
         </div>
 
@@ -97,37 +125,73 @@ function App() {
             {/* Project 1 */}
             <div className="project-item">
               <h3>League Management</h3>
-              <p>This solo project is a management system for sports leagues, allowing users to create teams, schedule matches, and track results. I built the front end using React, designed a RESTful API with Django, and managed data with a Postgres database.</p>
+              <p>
+                This solo project is a management system for sports leagues,
+                allowing users to create teams, schedule matches, and track
+                results. I built the front end using React, designed a RESTful
+                API with Django, and managed data with a Postgres database.
+              </p>
               <ul>
                 <li>React</li>
                 <li>Django</li>
                 <li>PostgreSQL</li>
               </ul>
-              <a href="https://github.com/Bobbytx/League_Mgmt_App" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+              <a
+                href="https://github.com/Bobbytx/League_Mgmt_App"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub
+              </a>
             </div>
 
             {/* Project 2 */}
             <div className="project-item">
               <h3>Dino Stocks</h3>
-              <p>As part of a team, I contributed to a stock simulation app with a dinosaur theme. The app allows users to practice stock trading strategies in a risk-free environment. My focus was on integrating real-time stock data, managing state with React Hooks, user authentication, and UI design.</p>
+              <p>
+                As part of a team, I contributed to a stock simulation app with
+                a dinosaur theme. The app allows users to practice stock trading
+                strategies in a risk-free environment. My focus was on
+                integrating real-time stock data, managing state with React
+                Hooks, user authentication, and UI design.
+              </p>
               <ul>
                 <li>React</li>
                 <li>Django</li>
                 <li>PostgreSQL</li>
               </ul>
-              <a href="https://github.com/theQuiltingRiverOtter/dinoStocks" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+              <a
+                href="https://github.com/theQuiltingRiverOtter/dinoStocks"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub
+              </a>
             </div>
 
             {/* Project 3 */}
             <div className="project-item">
               <h3>Portfolio Website</h3>
-              <p>I created this website from scratch using raw JS, HTML, and CSS in React. The design was created in Figma and I developed it without using any UI libraries. The design and layout is all done using CSS, primarily CSS Grid. The site is responsive to different window sizes to offer a seamless user experience on desktop and mobile screens.</p>
+              <p>
+                I created this website from scratch using raw JS, HTML, and CSS
+                in React. The design was created in Figma and I developed it
+                without using any UI libraries. The design and layout is all
+                done using CSS, primarily CSS Grid. The site is responsive to
+                different window sizes to offer a seamless user experience on
+                desktop and mobile screens.
+              </p>
               <ul>
                 <li>React</li>
                 <li>Javascript</li>
                 <li>CSS</li>
               </ul>
-              <a href="https://github.com/Bobbytx/Bobbytx.github.io" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+              <a
+                href="https://github.com/Bobbytx/Bobbytx.github.io"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub
+              </a>
             </div>
           </div>
         </div>
@@ -136,4 +200,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
