@@ -97,9 +97,13 @@ function App() {
   return (
     <><Navbar /><main>
       <section className="hero section-grid" id="about" aria-labelledby="hero-title">
-        <div className="hero-title"><p className="section-coordinate">31.9686° N / 99.9018° W</p><h1 id="hero-title">ROBERT<br />TOTH</h1><p className="hero-subtitle">Websites /<br />Software /<br />AI</p></div>
-        <div className="hero-description"><p>I like building things, figuring out how they work, and occasionally making them more complicated than necessary. Lately, that means websites, AI, automation, and whatever else catches my attention.</p><a href="mailto:bobby.toth@gmail.com" className="button-link">LET&apos;S CONNECT <span>↗</span></a></div>
-        <div className="hero-links"><div className="link-left"><a href="https://github.com/Bobbytx" target="_blank" rel="noreferrer">GitHub</a><span> / </span><a href="https://www.linkedin.com/in/roberttothpm/" target="_blank" rel="noreferrer">LinkedIn</a></div><a href="#offline" className="scroll-link"><span className="arrow" aria-hidden="true">↓</span><span>Scroll down</span></a></div>
+        <div className="hero-instrumentation" aria-hidden="true">
+          <span className="hero-home-index">01 / HOME</span>
+          <span className="hero-measure" />
+        </div>
+        <div className="hero-title"><p className="section-coordinate" aria-hidden="true">31.9686° N / 99.9018° W</p><h1 id="hero-title">ROBERT<br />TOTH</h1><p className="hero-subtitle">Websites /<br />Software /<br />AI</p></div>
+        <div className="hero-description"><div className="hero-description-label"><span>CURRENTLY</span><strong>WEB + AI + AUTOMATION</strong></div><p>I build thoughtful digital products and explore the systems behind them. Lately, my work has centered on websites, software, AI, and automation—usually with room for an experiment or two along the way.</p><a href="mailto:bobby.toth@gmail.com" className="button-link">LET&apos;S CONNECT <span>↗</span></a></div>
+        <div className="hero-links"><div className="link-left"><a href="https://github.com/Bobbytx" target="_blank" rel="noreferrer">GitHub</a><span> / </span><a href="https://www.linkedin.com/in/roberttothpm/" target="_blank" rel="noreferrer">LinkedIn</a></div><a href="#offline" className="scroll-link"><span className="scroll-meta">NEXT / 01</span><span className="scroll-rule" aria-hidden="true"><i /></span><span className="arrow" aria-hidden="true">↓</span><span>Scroll down</span></a></div>
       </section>
 
       <section className="content-section section-grid" id="offline" aria-labelledby="offline-title">

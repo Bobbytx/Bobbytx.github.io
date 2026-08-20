@@ -20,7 +20,7 @@ function Navbar() {
     <header className="site-header"><nav className="navbar" ref={navRef} aria-label="Main navigation">
       <a className="location" href="#about" aria-label="Robert Toth, home">TEXAS <span>— USA</span></a>
       <ul className={`nav-links ${isOpen ? "open" : ""}`} id="main-menu">{navItems.map(([label, href]) => <li key={label}><a href={href} onClick={() => setIsOpen(false)}>{label}</a></li>)}</ul>
-      <div className="work-status"><span className="navbar-circle" aria-hidden="true" /><span className="status">BUILDING SOMETHING UNNECESSARY</span></div>
+      <div className="work-status"><span className="navbar-circle" aria-hidden="true" /><span className="status">DESIGNING + BUILDING DIGITAL PRODUCTS</span></div>
       <button className="hamburger" type="button" onClick={() => setIsOpen((open) => !open)} aria-expanded={isOpen} aria-controls="main-menu" aria-label={isOpen ? "Close menu" : "Open menu"}><HamburgerIcon isOpen={isOpen} /></button>
     </nav></header>
   );
