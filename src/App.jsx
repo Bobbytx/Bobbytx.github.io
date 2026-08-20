@@ -103,27 +103,27 @@ function App() {
         </div>
         <div className="hero-title"><p className="section-coordinate" aria-hidden="true">31.9686° N / 99.9018° W</p><h1 id="hero-title">ROBERT<br />TOTH</h1><p className="hero-subtitle">Websites /<br />Software /<br />AI</p></div>
         <div className="hero-description"><div className="hero-description-label"><span>CURRENTLY</span><strong>WEB + AI + AUTOMATION</strong></div><p>I build thoughtful digital products and explore the systems behind them. Lately, my work has centered on websites, software, AI, and automation—usually with room for an experiment or two along the way.</p><a href="mailto:bobby.toth@gmail.com" className="button-link">LET&apos;S CONNECT <span>↗</span></a></div>
-        <div className="hero-links"><div className="link-left"><a href="https://github.com/Bobbytx" target="_blank" rel="noreferrer">GitHub</a><span> / </span><a href="https://www.linkedin.com/in/roberttothpm/" target="_blank" rel="noreferrer">LinkedIn</a></div><a href="#offline" className="scroll-link"><span className="scroll-meta">NEXT / 01</span><span className="scroll-rule" aria-hidden="true"><i /></span><span className="arrow" aria-hidden="true">↓</span><span>Scroll down</span></a></div>
-      </section>
-
-      <section className="content-section section-grid" id="offline" aria-labelledby="offline-title">
-        <div className="section-title"><span className="section-number">01 / 04</span><h2 id="offline-title">&lt; Offline /&gt;</h2></div>
-        <div className="section-content offline-content"><p>Big sports fan. I follow my Texas teams and love going to games whenever I get the chance. I’m always looking for new restaurants to try and new places to travel, especially anywhere with a great view. Lately, I’ve been learning to play guitar. I also enjoy fixing things, working with my hands, and taking on DIY projects around the house. Work with me so I can keep funding these hobbies. <a href="mailto:bobby.toth@gmail.com">GET IN TOUCH ↗</a>{" "}if you want to know more.</p></div>
+        <div className="hero-links"><div className="link-left"><a href="https://github.com/Bobbytx" target="_blank" rel="noreferrer">GitHub</a><span> / </span><a href="https://www.linkedin.com/in/roberttothpm/" target="_blank" rel="noreferrer">LinkedIn</a></div><a href="#what-i-do" className="scroll-link"><span className="scroll-meta">NEXT / 01</span><span className="scroll-rule" aria-hidden="true"><i /></span><span className="arrow" aria-hidden="true">↓</span><span>Scroll down</span></a></div>
       </section>
 
       <section className="content-section section-grid" id="what-i-do" aria-labelledby="services-title">
-        <div className="section-title"><span className="section-number">02 / 04</span><h2 id="services-title">&lt; What I Do /&gt;</h2></div>
+        <div className="section-title"><span className="section-number">01 / 04</span><h2 id="services-title">&lt; What I Do /&gt;</h2></div>
         <div className="section-content service-list">{services.map(([title, copy], index) => <article className="service-item" key={title}><span>0{index + 1}</span><div><h3>{title}</h3><p>{copy}</p></div></article>)}</div>
       </section>
 
       <section className="projects-section" id="projects" aria-labelledby="projects-title">
-        <div className="projects-heading section-grid"><div className="section-title"><span className="section-number">03 / 04</span><h2 id="projects-title">&lt; Projects /&gt;</h2></div><p>Selected things I’ve made, overthought, rebuilt, or taught a computer to recognize.</p></div>
+        <div className="projects-heading section-grid"><div className="section-title"><span className="section-number">02 / 04</span><h2 id="projects-title">&lt; Projects /&gt;</h2></div><p>Selected things I’ve made, overthought, rebuilt, or taught a computer to recognize.</p></div>
         <div className="featured-projects">{featuredProjects.map((project, index) => <FeaturedProject project={project} reverse={index % 2 === 1} key={project.slug} />)}</div>
       </section>
 
       <section className="other-section section-grid" id="other-things" aria-labelledby="other-title">
-        <div className="section-title"><span className="section-number">04 / 04</span><h2 id="other-title">&lt; Other Things /&gt;</h2></div>
+        <div className="section-title"><span className="section-number">03 / 04</span><h2 id="other-title">&lt; Other Things /&gt;</h2></div>
         <div className="other-list">{otherProjects.map((project) => <a href={project.link} target="_blank" rel="noreferrer" className="other-project" key={project.title}><span className="other-index">{project.index}</span><div><h3>{project.title}</h3><p>{project.description}</p><small>{project.technologies}</small></div><span className="other-arrow" aria-hidden="true">↗</span></a>)}</div>
+      </section>
+
+      <section className="content-section offline-section section-grid" id="offline" aria-labelledby="offline-title">
+        <div className="section-title"><span className="section-number">04 / 04</span><h2 id="offline-title">&lt; Offline /&gt;</h2></div>
+        <div className="section-content offline-content"><p>Big sports fan. I follow my Texas teams and love going to games whenever I get the chance. I’m always looking for new restaurants to try and new places to travel, especially anywhere with a great view. Lately, I’ve been learning to play guitar. I also enjoy fixing things, working with my hands, and taking on DIY projects around the house. Work with me so I can keep funding these hobbies. <a href="mailto:bobby.toth@gmail.com">GET IN TOUCH ↗</a>{" "}if you want to know more.</p></div>
       </section>
 
       <footer className="site-footer"><p>ROBERT TOTH © {new Date().getFullYear()}</p><p>Made in Texas. Probably revised again soon.</p><a href="#about">BACK TO TOP ↑</a></footer>

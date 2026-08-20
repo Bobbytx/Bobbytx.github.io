@@ -112,7 +112,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
 .league-system i { flex: 1; height: 1px; margin: 0 .7rem; background: var(--ink); position: relative; }.league-system i::after { content: ""; position: absolute; right: 0; top: -3px; width: 7px; height: 7px; border-radius: 50%; background: var(--signal); border: 1px solid var(--ink); }
 .league-footer { margin-top: 1.5rem; text-align: right; font-size: .62rem; }.league-footer span { color: var(--signal); -webkit-text-stroke: 1px var(--ink); }
 
-.other-section { padding-block: clamp(7rem, 12vw, 12rem); }
+.other-section { padding-top: clamp(7rem, 12vw, 12rem); }
+.offline-section { padding-bottom: clamp(7rem, 12vw, 12rem); }
 .other-list { grid-column: 6 / 13; border-top: 1px solid var(--ink); }
 .other-project { display: grid; grid-template-columns: 2rem 1fr auto; gap: 1rem; padding: 2rem 0; border-bottom: 1px solid var(--ink); transition: padding .2s ease, background .2s ease; }
 .other-project:hover { padding-inline: 1rem; background: rgba(0, 236, 66, .09); }
@@ -134,7 +135,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
   .content-section { padding-top: 6.5rem; }.section-title { margin-bottom: 2.5rem; }.section-title h2 { white-space: normal; }.section-content { width: 100%; }.offline-content { padding-top: 1.5rem; }
   .projects-section { padding-top: 7rem; }.projects-heading > p { max-width: 35rem; margin-top: 2rem; }.featured-projects { margin-top: 3rem; }
   .featured-project, .featured-project--reverse { display: flex; flex-direction: column; min-height: 0; }.featured-project--reverse .project-copy { order: 1; }.featured-project--reverse .project-visual { order: 2; border-right: 0; }.project-copy { padding: 4.5rem 1.25rem 3rem; }.project-index { top: 1rem; right: 1.25rem; }.project-copy h3 { font-size: clamp(3rem, 14vw, 5rem); }.project-visual { min-height: min(35rem, 110vw); border-top: 1px solid var(--ink); border-left: 0; }
-  .other-section { padding-block: 7rem; }.other-list { margin-top: 2.5rem; }.other-project { grid-template-columns: 1.5rem 1fr auto; }.other-project:hover { padding-inline: .5rem; }
+  .other-section { padding-top: 7rem; }.offline-section { padding-bottom: 7rem; }.other-list { margin-top: 2.5rem; }.other-project { grid-template-columns: 1.5rem 1fr auto; }.other-project:hover { padding-inline: .5rem; }
   .site-footer { grid-template-columns: 1fr auto; gap: .6rem; padding: 1.5rem 1.25rem; }.site-footer p:nth-child(2) { grid-column: 1 / -1; grid-row: 2; text-align: left; }.site-footer a { grid-column: 2; grid-row: 1; }
 }
 
