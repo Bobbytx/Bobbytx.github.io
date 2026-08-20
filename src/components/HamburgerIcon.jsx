@@ -1,5 +1,4 @@
-import React from 'react';
-import '../styles/Navbar.css';
+import PropTypes from "prop-types";
 
 function HamburgerIcon({ isOpen }) {
     return (
@@ -12,3 +11,7 @@ function HamburgerIcon({ isOpen }) {
 }
 
 export default HamburgerIcon;
+
+HamburgerIcon.propTypes = {
+    isOpen: PropTypes.bool.isRequired,
+};

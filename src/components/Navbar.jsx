@@ -1,57 +1,28 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../styles/Navbar.css";
 import HamburgerIcon from "./HamburgerIcon";
 
+const navItems = [["About", "#about"], ["What I Do", "#what-i-do"], ["Projects", "#projects"], ["Contact", "mailto:bobby.toth@gmail.com"]];
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const navRef = useRef();
+  const navRef = useRef(null);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  useEffect(
-    () => {
-      const handleClickOutside = (e) => {
-        if (navRef.current && !navRef.current.contains(event.target)) {
-          setIsOpen(false);
-        }
-      };
-
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    },
-    [navRef],
-    [setIsOpen],
-  );
+  useEffect(() => {
+    const handleClickOutside = (event) => { if (navRef.current && !navRef.current.contains(event.target)) setIsOpen(false); };
+    const handleEscape = (event) => { if (event.key === "Escape") setIsOpen(false); };
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleEscape);
+    return () => { document.removeEventListener("mousedown", handleClickOutside); document.removeEventListener("keydown", handleEscape); };
+  }, []);
 
   return (
-    <nav className="navbar" ref={navRef}>
-      <div className="location">Texas</div>
-      <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#experience">Experience</a>
-        </li>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-        <li>
-          <a href="mailto:bobby.toth@gmail.com">Contact</a>
-        </li>
-      </ul>
-      <div className="work-status">
-        <div className="navbar-circle"></div>
-        <div className="status">BUILDING SOMETHING UNNECESSARY</div>
-      </div>
-      <div className="hamburger" onClick={toggleMenu}>
-        <HamburgerIcon isOpen={isOpen} />
-      </div>
-    </nav>
+    <header className="site-header"><nav className="navbar" ref={navRef} aria-label="Main navigation">
+      <a className="location" href="#about" aria-label="Robert Toth, home">TEXAS <span>— USA</span></a>
+      <ul className={`nav-links ${isOpen ? "open" : ""}`} id="main-menu">{navItems.map(([label, href]) => <li key={label}><a href={href} onClick={() => setIsOpen(false)}>{label}</a></li>)}</ul>
+      <div className="work-status"><span className="navbar-circle" aria-hidden="true" /><span className="status">BUILDING SOMETHING UNNECESSARY</span></div>
+      <button className="hamburger" type="button" onClick={() => setIsOpen((open) => !open)} aria-expanded={isOpen} aria-controls="main-menu" aria-label={isOpen ? "Close menu" : "Open menu"}><HamburgerIcon isOpen={isOpen} /></button>
+    </nav></header>
   );
 }
 
