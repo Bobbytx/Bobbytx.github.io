@@ -123,7 +123,7 @@ function App() {
 
       <section className="content-section offline-section section-grid" id="offline" aria-labelledby="offline-title">
         <div className="section-title"><span className="section-number">04 / 04</span><h2 id="offline-title">&lt; Offline /&gt;</h2></div>
-        <div className="section-content offline-content"><p>Big sports fan. I follow my Texas teams and love going to games whenever I get the chance. I’m always looking for new restaurants to try and new places to travel, especially anywhere with a great view. Lately, I’ve been learning to play guitar. I also enjoy fixing things, working with my hands, and taking on DIY projects around the house. Those interests keep me curious, hands-on, and usually planning the next project. <a href="mailto:bobby.toth@gmail.com">GET IN TOUCH ↗</a>{" "}if you’d like to connect.</p></div>
+        <div className="section-content offline-content"><p>Big sports fan. I follow my Texas teams and love going to games whenever I get the chance. I’m always looking for new restaurants to try and new places to travel, especially anywhere with a great view. Lately, I’ve been learning to play guitar. I also enjoy fixing things, working with my hands, and taking on DIY projects around the house. Those interests—and two cats with strong opinions about my keyboard—keep me curious, hands-on, and usually planning the next project. <a href="mailto:bobby.toth@gmail.com">GET IN TOUCH ↗</a>{" "}if you’d like to connect.</p></div>
       </section>
 
       <footer className="site-footer"><p>ROBERT TOTH © {new Date().getFullYear()}</p><p>Made in Texas. Probably revised again soon.</p><a href="#about">BACK TO TOP ↑</a></footer>
